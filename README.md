@@ -17,6 +17,8 @@ Binary sentiment classifier on SST-2 using pre-trained GloVe embeddings and a 2-
 | `dataset.py` | PyTorch Dataset + DataLoader                    |
 | `model.py`   | SentimentLSTM architecture                      |
 | `train.py`   | Training loop with frozen/fine-tuned comparison |
+| `predict.py` | Inference on custom text                        |
+
 
 ## Setup
 ```bash
