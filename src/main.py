@@ -35,7 +35,7 @@ def main():
         print(f"Matrix row for 'the': {matrix[idx][:5]}")
 
     print("\n=== CHECK 4: Model Output ===")
-    from src.model import SentimentLSTM
+    from model import SentimentLSTM
 
     model = SentimentLSTM(matrix, freeze=True)
     fake_input = torch.randint(0, 100, (4, 64))

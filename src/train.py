@@ -5,8 +5,8 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from src.dataset import SSTDataset
-from src.model import SentimentLSTM
+from dataset import SSTDataset
+from model import SentimentLSTM
 
 # ── config ────────────────────────────────────────────────────
 EPOCHS = 5
@@ -102,7 +102,7 @@ def train(freeze=True):
 
     # optimizer — Adam
     optimizer = torch.optim.Adam(
-        filter(lambda p: p.requires_grad, model.parameters()), lr=LR, weight_decay=1e-5
+        filter(lambda p: p.requires_grad, model.parameters()), lr=3e-4
     )
 
     best_val_acc = 0
