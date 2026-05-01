@@ -1,7 +1,7 @@
 # Sentiment Analysis with GloVe + LSTM
 
-Binary sentiment classifier on SST-2 using pre-trained GloVe embeddings and a 2-layer LSTM.
 A binary sentiment classifier that reads movie reviews and predicts whether they're positive or negative.
+Binary sentiment classifier on SST-2 using pre-trained GloVe embeddings and a 2-layer LSTM.
 
 
 ## Architecture
@@ -20,15 +20,20 @@ A binary sentiment classifier that reads movie reviews and predicts whether they
 
 ## Setup
 ```bash
-# Download GloVe
+# 1. Download GloVe
 mkdir data && cd data
 wget https://nlp.stanford.edu/data/glove.6B.zip
 unzip glove.6B.zip
+cd ..
 
-# Run
-python vocab.py      # builds vocab + embedding matrix
-python train.py      # trains both phases
+# 2. Build vocabulary and embedding matrix
+python vocab.py
 
+# 3. Train model (both frozen and fine-tuned phases)
+python train.py
+
+# 4. Predict on your own text
+python predict.py
 ```
 
 ## Results
